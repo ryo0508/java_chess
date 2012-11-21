@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public abstract class Piece {
 
 	private Location curLocation;
-	private boolean playerB = false;
+	private boolean playerB;
 
 	public Piece(Location location, boolean player) {
 		playerB = player;
@@ -21,6 +21,12 @@ public abstract class Piece {
 	public boolean isB() {
 		return playerB;
 	}
+	
+	public void move(int possibleMove) {
+		Location newLocation = possibleMoves().get(possibleMove);
+		setCurrentLocation(newLocation);
+	}
+	
 	public boolean canMove(Location to) {
 		// check if it can move or not
 		return true;
