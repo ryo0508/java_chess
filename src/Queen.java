@@ -37,4 +37,8 @@ public class Queen extends Piece {
 		}
 		return moveList;
 	}
+	
+	public String displayChar() {
+		return (isB() ? "Q" : "q");
+	}
 }

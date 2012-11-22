@@ -16,5 +16,9 @@ public class Pawn extends Piece {
 		}
 		return possiblePositions;
 	}
+	
+	public String displayChar() {
+		return (isB() ? "P" : "p");
+	}
 
 }

@@ -7,19 +7,27 @@ public class ChessTestDrive {
 	 */
 	public static void main(String[] args) {
 		
+		GameMaster gm = new GameMaster();
+		gm.startGame();
 		
+		for(int i = 0; i < 10; i++) {
+			gm.movePiece();
+		}
+		
+//		Board board = new Board();
+//		board.renderBoard();
 		// Location test
-		Location loc = new Location(1, 1);
-		Location loc2 = new Location(7,2);
+//		Location loc = new Location(1, 1);
+//		Location loc2 = new Location(7,2);
 		
-		Pawn pawn = new Pawn(loc, false);
-		curPosition(pawn);
-		showPossibleMoves(pawn);
-		pawn.move(0);
-		curPosition(pawn);
-		showPossibleMoves(pawn);
-		pawn.move(1);
-		curPosition(pawn);
+//		Pawn pawn = new Pawn(loc, false);
+//		curPosition(pawn);
+//		showPossibleMoves(pawn);
+//		pawn.move(0);
+//		curPosition(pawn);
+//		showPossibleMoves(pawn);
+//		pawn.move(1);
+//		curPosition(pawn);
 //		showPossibleMoves(new Pawn(loc, false));
 		
 //		showPossibleMoves(new Pawn(loc, true));

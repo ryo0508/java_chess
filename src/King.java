@@ -19,4 +19,8 @@ public class King extends Piece {
 		
 		return moveList;
 	}
+	
+	public String displayChar() {
+		return (isB() ? "O" : "o");
+	}
 }

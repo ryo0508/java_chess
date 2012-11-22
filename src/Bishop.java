@@ -33,4 +33,7 @@ public class Bishop extends Piece {
 		
 		return moveList;
 	}
+	public String displayChar() {
+		return (isB() ? "B" : "b");
+	}
 }

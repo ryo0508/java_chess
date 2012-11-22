@@ -22,4 +22,7 @@ public class Rook extends Piece {
 		}
 		return moveList;
 	}
+	public String displayChar() {
+		return (isB() ? "R" : "r");
+	}
 }

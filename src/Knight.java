@@ -19,5 +19,7 @@ public class Knight extends Piece {
 		
 		return moveList;
 	}
-
+	public String displayChar() {
+		return (isB() ? "K" : "k");
+	}
 }

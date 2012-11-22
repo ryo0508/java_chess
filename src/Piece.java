@@ -50,4 +50,6 @@ public abstract class Piece {
 	public ArrayList<Location> moveList() {
 		return new ArrayList<Location>();
 	};
+	
+	abstract String displayChar();
 }
