@@ -10,14 +10,14 @@ public class ChessTestDrive {
 		GameMaster gm = new GameMaster();
 		gm.startGame();
 		
-		for(int i = 0; i < 10; i++) {
+		while(gm.canGoOn()) {
 			gm.movePiece();
 		}
 		
 //		Board board = new Board();
 //		board.renderBoard();
 		// Location test
-//		Location loc = new Location(1, 1);
+//		Location loc = new Location(5, 5);
 //		Location loc2 = new Location(7,2);
 		
 //		Pawn pawn = new Pawn(loc, false);
@@ -34,7 +34,11 @@ public class ChessTestDrive {
 //		showPossibleMoves(new Pawn(loc2, true));
 //		showPossibleMoves(new Knight(loc, false));
 //		showPossibleMoves(new King(loc, true));
-//		showPossibleMoves(new Bishop(loc, false));
+//		Bishop b = new Bishop(loc, false);
+//		curPosition(b);
+//		b.moveList();
+//		showPossibleMoves(b);
+		//showPossibleMoves(new Bishop(loc, false));
 //		
 //		// Create User
 //		Player player1 = new Player(false);

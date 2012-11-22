@@ -39,8 +39,7 @@ public abstract class Piece {
 		for (Location p : moveList()) {
 			Location pp = playerB ? getCurrentLocation().minusLocation(p)
 					: getCurrentLocation().addLocation(p);
-			if (!(pp.getColumn() < 0 || pp.getColumn() > 7 || pp.getRow() < 0 || pp
-					.getRow() > 7)) {
+			if (pp.getColumn() > 0 && pp.getColumn() < 9 && pp.getRow() > 0 && pp.getRow() < 9) {
 				possibleMoves.add(pp);
 			}
 		}

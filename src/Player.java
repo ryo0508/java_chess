@@ -20,7 +20,7 @@ public class Player {
 	
 	public boolean stillAlive() {
 		for(Piece p : pieces) {
-			if(p.getClass().toString() == "King") {
+			if(p instanceof King) {
 				return true;
 			}
 		}
@@ -30,9 +30,9 @@ public class Player {
 	public void setPiecesInPlace() {
 		if (playerB) {
 			// Create pawns
-//			for (int i = 1; i <= 8; i++) {
-//				pieces.add(new Pawn(new Location(7, i), true));
-//			}
+			for (int i = 1; i <= 8; i++) {
+				pieces.add(new Pawn(new Location(7, i), true));
+			}
 			pieces.add(new Rook(new Location(8, 1), true));
 			pieces.add(new Knight(new Location(8, 2), true));
 			pieces.add(new Bishop(new Location(8, 3), true));
@@ -42,10 +42,11 @@ public class Player {
 			pieces.add(new Knight(new Location(8, 7), true));
 			pieces.add(new Rook(new Location(8, 8), true));
 		} else {
+			
 			// Create pawns
-//			for (int i = 1; i <= 8; i++) {
-//				pieces.add(new Pawn(new Location(2, i), false));
-//			}
+			for (int i = 1; i <= 8; i++) {
+				pieces.add(new Pawn(new Location(2, i), false));
+			}
 			pieces.add(new Rook(new Location(1, 1), false));
 			pieces.add(new Knight(new Location(1, 2), false));
 			pieces.add(new Bishop(new Location(1, 3), false));

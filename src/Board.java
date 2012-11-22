@@ -64,10 +64,13 @@ public class Board {
 		
 		ArrayList<Location> possibleMoves = targetPiece.possibleMoves();
 		
+		for( Location l : possibleMoves) {
+			System.out.println("[" + l.getRow() + ", " + l.getColumn() + "]");
+		}
+		
 		System.out.println("    1   2   3   4   5   6   7   8  ");
 		System.out.println("  =================================");
 		// System.out.println(" =================");
-		int possibleLocation = 0;
 		for (int i = 1; i <= 8; i++) {
 			int row = i;
 			System.out.print(i + " |");
@@ -78,10 +81,11 @@ public class Board {
 				boolean exist = false;
 				for(Location l : possibleMoves) {
 					if(row == l.getRow() && column == l.getColumn()){
+						int possibleLocation = possibleMoves.indexOf(l);
 						if(possibleLocation > 9) {
-							System.out.print(" " + possibleLocation);	
+							System.out.print("*" + possibleLocation);	
 						} else {
-							System.out.print(" " + possibleLocation + " ");	
+							System.out.print("*" + possibleLocation + " ");
 						}
 						possibleLocation++;
 						exist = true;

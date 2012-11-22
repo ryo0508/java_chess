@@ -27,6 +27,14 @@ public class GameMaster {
 		board.addPiece(playerB.returnPieces());
 	}
 	
+	public boolean canGoOn(){
+		if( playerA.stillAlive() && playerB.stillAlive() ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	public void movePiece() {
 		Piece targetPiece = askWhichPieceToMove();
 		askWhereToMove(targetPiece);
